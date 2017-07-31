@@ -6,8 +6,8 @@ feature "Authenticated user can update their profile information" do
     User.create(
       first_name: 'Jess',
       last_name: 'Titus',
-      password: 'JET',
-      profile_photo: "http://i.imgur.com/jluf593.jpg",
+      password: 'JET123',
+      # profile_photo: "http://i.imgur.com/jluf593.jpg",
       email: 'JET@email.com'
     )
   end
@@ -17,7 +17,7 @@ feature "Authenticated user can update their profile information" do
 
     click_on "Log In"
 
-    fill_in "Password", with: "JET"
+    fill_in "Password", with: "JET123"
     fill_in "Email", with: "JET@email.com"
 
     click_button "Log in"
@@ -28,14 +28,14 @@ feature "Authenticated user can update their profile information" do
     expect(page).to have_content "First name"
     expect(page).to have_content "Last name"
     expect(page).to have_content "Password"
-    expect(page).to have_content "Profile photo"
+    # expect(page).to have_content "Profile photo"
     expect(page).to have_content "Email"
 
-    fill_in "Current password", with: "JackieIsMyMom"
+    fill_in "Current password", with: "JET123"
 
-    expect(page).to have_field("First name", with: jackie.first_name)
-    expect(page).to have_field("Last name", with: jackie.last_name)
-    expect(page).to have_field("Email", with: jackie.email)
+    expect(page).to have_field("First name", with: jess.first_name)
+    expect(page).to have_field("Last name", with: jess.last_name)
+    expect(page).to have_field("Email", with: jess.email)
 
     click_button "Update"
 

@@ -6,14 +6,14 @@ feature "Authenticated users can delete their account" do
     User.create(
       first_name: 'Jess',
       last_name: 'Titus',
-      password: 'JET',
-      profile_photo: "http://i.imgur.com/jluf593.jpg",
+      password: 'JET123',
+      # profile_photo: "http://i.imgur.com/jluf593.jpg",
       email: 'JET@gmail.com'
     )
   end
   scenario "user deletes account successfully" do
     visit new_user_session_path
-    fill_in "Password", with: "JET"
+    fill_in "Password", with: "JET123"
     fill_in "Email", with: "JET@gmail.com"
 
     click_button "Log in"
