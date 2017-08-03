@@ -1,0 +1,23 @@
+ul.menu, div.top-bar {
+  background-color: #FE0000;
+}
+
+a {
+  color: white;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.callout {
+  opacity: 0.9;
+  margin-top: 40px;
+}
+
+/*.login {
+  color: red;
+}
+
+a href {
+  color: red;
+}*/
