@@ -1,5 +1,8 @@
 source 'https://rubygems.org/'
 
+gem 'devise'
+gem 'fog'
+gem 'fog-aws'
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
