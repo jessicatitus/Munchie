@@ -1,6 +1,8 @@
 source 'https://rubygems.org/'
 
 gem 'devise'
+gem "carrierwave"
+gem 'mini_magick', '~> 4.3'
 gem 'fog'
 gem 'fog-aws'
 gem 'rails', '~> 5.1.2'
@@ -19,6 +21,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "dotenv-rails"
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy', require: false
