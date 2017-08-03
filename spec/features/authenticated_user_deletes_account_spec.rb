@@ -25,6 +25,6 @@ feature "Authenticated users can delete their account" do
     click_link "Cancel my account"
 
     expect(page).to have_content "Your account has been successfully cancelled."
-    expect(page).to have_content "Donut Worry"
+    expect(page).to have_content "Munchie"
   end
 end

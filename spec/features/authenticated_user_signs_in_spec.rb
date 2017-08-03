@@ -17,7 +17,7 @@ feature "Authenticated user can sign in" do
 
     click_button "Log in"
 
-    expect(page).to have_content "User signed in successfully"
+    expect(page).to have_content "Signed in successfully"
     expect(page).to have_content "Munchie"
   end
 

@@ -25,16 +25,16 @@ feature "Authenticated user can update their profile information" do
     click_on "Edit Profile"
 
     expect(page).to have_content "Edit Profile"
-    expect(page).to have_content "First name"
-    expect(page).to have_content "Last name"
+    expect(page).to have_content "First Name"
+    expect(page).to have_content "Last Name"
     expect(page).to have_content "Password"
     # expect(page).to have_content "Profile photo"
     expect(page).to have_content "Email"
 
     fill_in "Current password", with: "JET123"
 
-    expect(page).to have_field("First name", with: jess.first_name)
-    expect(page).to have_field("Last name", with: jess.last_name)
+    expect(page).to have_field("First Name", with: jess.first_name)
+    expect(page).to have_field("Last Name", with: jess.last_name)
     expect(page).to have_field("Email", with: jess.email)
 
     click_button "Update"
