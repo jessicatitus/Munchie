@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  # mount_uploader :profile_photo, ProfilePhotoUploader
+  mount_uploader :profile_photo, ProfilePhotoUploader
   has_many :pictures
   has_many :restaurants
   has_many :hashtags

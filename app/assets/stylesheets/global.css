@@ -2,22 +2,31 @@ ul.menu, div.top-bar {
   background-color: #FE0000;
 }
 
-a {
+a, li.menu-text {
   color: white;
   font-family: 'Shadows Into Light Two', cursive;
   font-weight: bold;
   font-size: 22px;
+}
+a:hover {
+  color: black;
 }
 
 .callout {
   opacity: 0.9;
   margin-top: 40px;
 }
-
-/*.login {
-  color: red;
+.profile-photo-edit {
+  width: 210px;
+  height: 210px;
+  padding-top: 3px;
+  padding-bottom: 7px;
 }
-
-a href {
-  color: red;
-}*/
+.profile-photo {
+  width: 45px;
+  height: 45px;
+}
+.crop img {
+    width: 50px;
+    height: 50px;
+}
