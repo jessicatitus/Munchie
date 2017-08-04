@@ -1,6 +1,9 @@
 ul.menu, div.top-bar {
   background-color: #FE0000;
 }
+body {
+  background-color: #F0F0F0;
+}
 
 a, li.menu-text {
   color: white;
