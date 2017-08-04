@@ -1,9 +1,14 @@
 import React from 'react';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import RestaurantsIndexContainer from './RestaurantsIndexContainer';
 
 const App = props => {
   return (
-    <Router history={browserHistory}>
+    <Router>
+      <div>
+        <Route path='/' component={RestaurantsIndexContainer}/>
+        <Route path='/restaurants' component={RestaurantsIndexContainer}/>
+      </div>
     </Router>
   )
 }
