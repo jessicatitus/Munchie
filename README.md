@@ -23,4 +23,3 @@
 <li>Visit <a href='http://localhost:3000/'>http://localhost:3000/</a> in your browser.</li>
 </ul>
 
-![ER diagram](nomnoml (1).png) 
