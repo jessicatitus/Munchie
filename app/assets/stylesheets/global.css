@@ -41,3 +41,11 @@ span.login a, span.links a {
 span.login a:hover, span.links a:hover {
   color: black;
 }
+
+/*image overlay*/
+
+img.index-image:hover  {
+    display: block;
+    opacity: 0.1;
+    text-align: center;
+}

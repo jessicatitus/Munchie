@@ -11,8 +11,7 @@ class RestaurantShowContainer extends Component {
   }
 
   componentDidMount() {
-  
-    let restaurantId = props.restaurant.id
+    let restaurantId = this.props.params.id
     fetch(`/api/v1/restaurants/${restaurantId}`, {
       credentials: 'same-origin'
     })
