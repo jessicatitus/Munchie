@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploader :img_url, ImageUploader
   has_many :pictures
   has_many :users
 

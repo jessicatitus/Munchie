@@ -29,9 +29,10 @@ a:hover {
   width: 45px;
   height: 45px;
 }
-.crop img {
-    width: 50px;
-    height: 50px;
+
+img.index-image {
+  border-radius: 10px;
+  padding: 4px;
 }
 
 span.login a, span.links a {

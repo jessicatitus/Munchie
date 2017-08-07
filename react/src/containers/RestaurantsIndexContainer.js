@@ -32,18 +32,23 @@ class RestaurantsIndexContainer extends Component {
   render() {
     let addNewRestaurant = (formPayload) => this.addNewRestaurant(formPayload)
 
+
+
     let restaurants = this.state.restaurants.map(restaurant => {
       return(
-        <RestaurantTile
-          key={restaurant.id}
-          id={restaurant.id}
-          img_url={restaurant.img_url}
-        />
+
+          <RestaurantTile
+            key={restaurant.id}
+            id={restaurant.id}
+            img_url={restaurant.img_url.url}
+          />
+
       )
     })
 
+
     return (
-      <div>
+      <div className="row">
         {restaurants}
       </div>
     )
