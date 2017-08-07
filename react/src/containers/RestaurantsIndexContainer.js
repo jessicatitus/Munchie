@@ -41,8 +41,8 @@ class RestaurantsIndexContainer extends Component {
             key={restaurant.id}
             id={restaurant.id}
             img_url={restaurant.img_url.url}
+            restaurant={restaurant}
           />
-
       )
     })
 

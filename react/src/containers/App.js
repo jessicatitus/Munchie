@@ -7,8 +7,7 @@ const App = props => {
   return (
     <Router>
       <div>
-        <Route path='/' component={RestaurantsIndexContainer}/>
-        <Route path='/restaurants' component={RestaurantsIndexContainer}/>
+        <Route exact path='/' component={RestaurantsIndexContainer}/>
         <Route path='/restaurants/:id' component={RestaurantShowContainer}/>
       </div>
     </Router>
