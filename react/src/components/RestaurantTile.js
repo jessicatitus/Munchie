@@ -14,7 +14,7 @@ const RestaurantTile = (props) => {
       <Link to={`/restaurants/${props.id}`}>
             <div className='large-2 small-4 columns'>
               <img className='index-image' src={image} alt={props.name}></img>
-              <div class="text">Roar</div>
+              <div className="text">{props.restaurant.name}</div>
             </div>
       </Link>
     </div>
