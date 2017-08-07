@@ -1,4 +1,6 @@
 class Restaurant < ApplicationRecord
+  mount_uploader :img_url, ImageUploader
+  has_many :pictures
   has_many :users
 
   validates :name, presence: true
@@ -7,6 +9,5 @@ class Restaurant < ApplicationRecord
   validates :state, presence: true
   validates :zip, presence: true
   validates :img_url, presence: true
-
 
 end
