@@ -42,6 +42,11 @@ span.login a:hover, span.links a:hover {
   color: black;
 }
 
+div.columns.small-12 h1, h5{
+  text-align: center;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
 /*image overlay*/
 
 img.index-image:hover  {
@@ -49,3 +54,51 @@ img.index-image:hover  {
     opacity: 0.1;
     text-align: center;
 }
+
+div.text {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: auto;
+  margin: auto;
+  color: rgba(0, 0, 0, 0);
+}
+
+img.index-image:hover + div.text {
+  color: black;
+}
+
+/*div.text {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+}
+
+div.text div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div.text {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  opacity: 0;
+}
+
+img.index-image:hover div.text {
+  opacity: .1;
+}*/

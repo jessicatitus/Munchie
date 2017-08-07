@@ -38,7 +38,7 @@ class RestaurantShowContainer extends Component {
 
     return (
       <div className="row restaurant-description">
-      <div className="columns small-12 callout">
+      <div className="columns small-12">
         <h1>{this.state.restaurant.name}</h1>
         <h5>{this.state.restaurant.address}, {this.state.restaurant.city}, {this.state.restaurant.state} {this.state.restaurant.zip}</h5>
       </div>
