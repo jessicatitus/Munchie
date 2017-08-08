@@ -10,4 +10,7 @@ class Restaurant < ApplicationRecord
   validates :zip, presence: true
   validates :img_url, presence: true
 
+  def self.search(search)
+  where("name ILIKE ? OR city ILIKE ?", "%#{search}%", "%#{search}%")
+  end
 end
