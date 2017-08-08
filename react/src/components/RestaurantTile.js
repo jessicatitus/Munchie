@@ -12,7 +12,7 @@ const RestaurantTile = (props) => {
   return(
     <div>
       <Link to={`/restaurants/${props.id}`}>
-            <div className='large-2 small-4 columns'>
+            <div className='large-2 medium-4 small-6 columns'>
               <img className='index-image' src={image} alt={props.name}></img>
               <div className="text">{props.restaurant.name}</div>
             </div>
