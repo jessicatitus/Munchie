@@ -79,3 +79,13 @@ input#search {
 form#search-form {
   background-color: #FE0000;
 }
+
+.submitButton {
+  background-color: red;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  color: black;
+  background-color: #FE0000;
+}
