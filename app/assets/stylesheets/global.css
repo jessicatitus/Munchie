@@ -72,8 +72,10 @@ img.index-image:hover + div.text {
   padding-top: 15px;
 }
 
-.search {
-  width: 500px;
-  border-radius: 10px;
-  margin: 0 auto;
+input#search {
+  width: 300px;
+  border-radius: 5px;
+}
+form#search-form {
+  background-color: #FE0000;
 }
