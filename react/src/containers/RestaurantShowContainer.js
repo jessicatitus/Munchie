@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router';
+import ImageForm from '../components/ImageForm';
+
 
 class RestaurantShowContainer extends Component {
   constructor(props) {
@@ -42,10 +44,15 @@ class RestaurantShowContainer extends Component {
         <h1>{this.state.restaurant.name}</h1>
         <h5>{this.state.restaurant.address}, {this.state.restaurant.city}, {this.state.restaurant.state} {this.state.restaurant.zip}</h5>
       </div>
+      <div>
+        <ImageForm
+          id={this.props.match.params.id}
+        />
+      </div>
           <div className="columns small-4">
             {showImage}
+            
           </div>
-
         </div>
     )
   }

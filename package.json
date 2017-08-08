@@ -41,8 +41,10 @@
     "babel-preset-react": "^6.5.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-dropzone": "^4.0.0",
     "react-router": "^4.1.2",
     "react-router-dom": "^4.1.2",
+    "react-s3-uploader": "^4.2.0",
     "webpack": "^2.6.0"
   }
 }
