@@ -4,6 +4,8 @@
 
 <h1>Munchie</h1>
 
+Munchie is a super visual app for users who have trouble deciding where they want to eat.
+
 <h5>Technologies</h5>
 <li>Backend: Rails 5.1.2</li>
 <li>Frontend: React.js and Embedded Ruby</li>
@@ -24,3 +26,4 @@
 <li>Visit <a href='http://localhost:3000/'>http://localhost:3000/</a> in your browser.</li>
 </ul>
 
+![ER diagram](nomnoml1.png) 
