@@ -1,0 +1,33 @@
+<div class='callout'>
+  <h1>Upload a Photo</h1>
+  <%= form_for([@restaurant, @picture], html: { class: 'form'}) do |f| %>
+
+    <% if @picture.errors.any? %>
+      <div id="error_explanation">
+        <h4><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h4>
+
+        <ul>
+          <% @picture.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+        <%= f.hidden_field(:restaurant_id, :value => params[:restaurant_id]) %>
+    </div><br />
+
+    <div class="field">
+        <%= f.file_field :img_url %>
+    </div><br />
+
+    <div class="actions">
+      <%= f.submit "Upload"%>
+    </div>
+  <% end %>
+
+  <div class='backbutton'>
+    <%= link_to 'Back', restaurants_path %>
+  </div>
+</div>
