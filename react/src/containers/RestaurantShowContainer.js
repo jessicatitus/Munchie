@@ -3,7 +3,6 @@ import { Route, Redirect } from 'react-router';
 import ImageForm from '../components/ImageForm';
 import PictureTile from '../components/PictureTile';
 
-
 class RestaurantShowContainer extends Component {
   constructor(props) {
     super(props);
