@@ -20,7 +20,6 @@ class RestaurantsController < ApplicationController
 
   def create
   @restaurant = Restaurant.new(restaurant_params)
-  binding.pry
 
     if @restaurant.save
       flash[:notice] = 'Restaurant was successfully created'
@@ -31,14 +30,6 @@ class RestaurantsController < ApplicationController
     end
   end
 end
-
-# def edit
-#   @restaurant = Restaurant.find(params[:id])
-# end
-#
-# def update
-#
-# end
 
 private
 
