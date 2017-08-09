@@ -1,5 +1,5 @@
 [ ![Codeship Status for jessicatitus/Munchie](https://app.codeship.com/projects/664118c0-5856-0135-73c1-5ef5e2052994/status?branch=master)](https://app.codeship.com/projects/236256)
-![Code Climate](https://codeclimate.com/github/jessicatitus/Munchie)
+![Code Climate](https://codeclimate.com/github/jessicatitus/Munchie.png)
 # README
 
 <h1>Munchie</h1>
