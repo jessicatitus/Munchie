@@ -33,6 +33,16 @@ a:hover {
 img.index-image {
   border-radius: 10px;
   padding: 4px;
+  width: 280px;
+  height: 280px;
+}
+
+img.show-image {
+  /*width: 280px;
+  height: 180px;*/
+  display: block;
+  margin: auto;
+  border-radius: 10px;
 }
 
 span.login a, span.links a {
@@ -42,7 +52,7 @@ span.login a:hover, span.links a:hover {
   color: black;
 }
 
-div.columns.small-12 h1, h5{
+div.columns.small-12 h1, h5 {
   text-align: center;
   font-family: 'Shadows Into Light Two', cursive;
 }
@@ -91,5 +101,16 @@ form#search-form {
 }
 
 .picLink {
+  color: black;
+  text-align: center;
+  display: block;
+  padding-bottom: 6px;
+}
+
+img.show-image {
+  border-radius: 10px;
+}
+
+.backbtn {
   color: black;
 }
