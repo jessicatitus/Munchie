@@ -31,7 +31,7 @@ feature "Authenticated user can update their profile information" do
     # expect(page).to have_content "Profile photo"
     expect(page).to have_content "Email"
 
-    fill_in "Current password", with: "JET123"
+    fill_in "Current Password", with: "JET123"
 
     expect(page).to have_field("First Name", with: jess.first_name)
     expect(page).to have_field("Last Name", with: jess.last_name)

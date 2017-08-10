@@ -38,9 +38,10 @@ img.index-image {
 }
 
 img.show-image {
-  width: 280px;
-  height: 180px;
-  display: inline-block;
+  /*width: 280px;
+  height: 180px;*/
+  display: block;
+  margin: auto;
   border-radius: 10px;
 }
 
