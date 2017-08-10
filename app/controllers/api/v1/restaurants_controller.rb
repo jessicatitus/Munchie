@@ -6,6 +6,6 @@ class Api::V1::RestaurantsController < ApplicationController
   def show
     restaurant = Restaurant.find(params[:id])
     pictures = Picture.where(restaurant_id: params[:id])
-    render json: { restaurant: restaurant, pictures: pictures}, adapter: :json
+    render json: { restaurant: restaurant, pictures: pictures }, adapter: :json
   end
 end

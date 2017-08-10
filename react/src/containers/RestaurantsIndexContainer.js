@@ -14,7 +14,9 @@ class RestaurantsIndexContainer extends Component {
     fetch('/api/v1/restaurants')
     .then(response => response.json())
     .then(body => {
-      this.setState({ restaurants: body.restaurants })
+      this.setState({
+        restaurants: body.restaurants
+      })
     })
   }
 
@@ -32,8 +34,6 @@ class RestaurantsIndexContainer extends Component {
   render() {
     let addNewRestaurant = (formPayload) => this.addNewRestaurant(formPayload)
 
-
-
     let restaurants = this.state.restaurants.map(restaurant => {
       return(
 
@@ -45,7 +45,6 @@ class RestaurantsIndexContainer extends Component {
           />
       )
     })
-
 
     return (
       <div className="row">

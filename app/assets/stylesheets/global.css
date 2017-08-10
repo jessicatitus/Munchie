@@ -51,7 +51,7 @@ span.login a:hover, span.links a:hover {
   color: black;
 }
 
-div.columns.small-12 h1, h5{
+div.columns.small-12 h1, h5 {
   text-align: center;
   font-family: 'Shadows Into Light Two', cursive;
 }
@@ -100,5 +100,16 @@ form#search-form {
 }
 
 .picLink {
+  color: black;
+  text-align: center;
+  display: block;
+  padding-bottom: 6px;
+}
+
+img.show-image {
+  border-radius: 10px;
+}
+
+.backbtn {
   color: black;
 }

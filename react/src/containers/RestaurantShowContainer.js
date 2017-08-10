@@ -3,7 +3,6 @@ import { Route, Redirect } from 'react-router';
 import ImageForm from '../components/ImageForm';
 import PictureTile from '../components/PictureTile';
 
-
 class RestaurantShowContainer extends Component {
   constructor(props) {
     super(props);
@@ -57,11 +56,9 @@ class RestaurantShowContainer extends Component {
       <div className="columns small-12">
         <h1>{this.state.restaurant.name}</h1>
         <h5>{this.state.restaurant.address}, {this.state.restaurant.city}, {this.state.restaurant.state} {this.state.restaurant.zip}</h5>
+        <a href={`/restaurants/${this.state.restaurant.id}/pictures/new`} className="picLink">Upload an Image</a>
       </div>
-      <div>
-      <a href={`/restaurants/${this.state.restaurant.id}/pictures/new`} className="picLink">Upload an Image</a>
-      </div>
-          <div className="columns small-4">
+          <div className="row">
             {showImage}
             {pictures}
           </div>
