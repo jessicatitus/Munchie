@@ -4,26 +4,24 @@ require 'spec_helper'
 RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
   let!(:first_restaurant) do
-    Restaurant.create(
+    Restaurant.create!(
       name: "Union Square Donuts",
       address: "20 Bow Street",
       city: "Somerville",
       state: "MA",
       zip: "02143",
-      img_url: "http://static1.squarespace.com/static/51dacd5be4b0a4195e57886a"\
-      "/t/54622df0e4b0719cb5b6638a/1415720432271/USDlogo.png?format=1000w"
+      img_url: File.open(Rails.root.join("spec/support/images/chio-day-quotes.jpg"))
  )
   end
 
   let!(:second_restaurant) do
-    Restaurant.create(
+    Restaurant.create!(
       name: "Something Sweet Without Wheat",
       address: "19 6th Road",
       city: "Woburn",
       state: "MA",
       zip: "01801",
-      img_url: "http://3.bp.blogspot.com/-sV8nvQ4Gdp4/TjrLSxQDz3I/AAAAAAAAAA4"\
-      "/CGBF679SyTU/s860/new%2Bblog%2Bpic.jpg"
+      img_url: File.open(Rails.root.join("spec/support/images/chio-day-quotes.jpg"))
     )
   end
 
@@ -85,7 +83,6 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
   describe "GET#show" do
     it "should return a restaurant and all its pictures" do
       get :show, params: { id: first_restaurant.id,   headers: { "HTTP_API_TOKEN": "token"} }
-
 
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
