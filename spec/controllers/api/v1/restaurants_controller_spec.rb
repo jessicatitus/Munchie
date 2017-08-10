@@ -25,6 +25,20 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
     )
   end
 
+  let!(:first_picture) do
+    Picture.create!(
+    restaurant: first_restaurant,
+    img_url: File.open(Rails.root.join("spec/support/images/chio-day-quotes.jpg"))
+    )
+  end
+
+  let!(:second_picture) do
+    Picture.create!(
+    restaurant: first_restaurant,
+    img_url: File.open(Rails.root.join("spec/support/images/chio-day-quotes.jpg"))
+    )
+  end
+
   let!(:first_user) do
     User.create(
       first_name: "Ann",
@@ -59,24 +73,11 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
       expect(returned_json['restaurants'].length).to eq 2
       expect(returned_json['restaurants'][0]["name"]).to eq "Union Square Donuts"
-      expect(returned_json['restaurants'][0]["address"]).to eq "20 Bow Street"
-      expect(returned_json['restaurants'][0]["city"]).to eq "Somerville"
-      expect(returned_json['restaurants'][0]["state"]).to eq "MA"
-      expect(returned_json['restaurants'][0]["zip"]).to eq "02143"
-      expect(returned_json['restaurants'][0]["img_url"]).to eq "http://static1."\
-      "squarespace.com/static/51dacd5be4b0a4195e57886a/t/54622df0e4b0719cb5b"\
-      "6638a/1415720432271/USDlogo.png?format=1000w"
+      expect(returned_json['restaurants'][0]["img_url"]).to eq "/uploads/restaurant/img_url/9/chio-day-quotes.jpg"
 
       expect(returned_json['restaurants'][1]["name"]).to eq "Something Sweet"\
       " Without Wheat"
-      expect(returned_json['restaurants'][1]["address"]).to eq "19 6th Road"
-      expect(returned_json['restaurants'][1]["city"]).to eq "Woburn"
-      expect(returned_json['restaurants'][1]["state"]).to eq "MA"
-      expect(returned_json['restaurants'][1]["zip"]).to eq "01801"
-      expect(returned_json['restaurants'][1]["img_url"]).to eq "http://3."\
-      "bp.blogspot.com/-sV8nvQ4Gdp4/TjrLSxQDz3I/AAAAAAAAAA4/CGBF679SyTU"\
-      "/s860/new%2Bblog%2Bpic.jpg"
-
+      expect(returned_json['restaurants'][1]["img_url"]).to eq {"url"=>"/uploads/restaurant/img_url/13/chio-day-quotes.jpg", "thumb"=>{"url"=>"/uploads/restaurant/img_url/13/thumb_chio-day-quotes.jpg"}}
     end
   end
 
@@ -90,6 +91,10 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
       expect(returned_json.length).to eq 2
       expect(returned_json['restaurant']["name"]).to eq first_restaurant.name
+      expect(returned_json['restaurants']["address"]).to eq first_restaurant.address
+      expect(returned_json['restaurants']["city"]).to eq first_restaurant.city
+      expect(returned_json['restaurants']["state"]).to eq first_restaurant.state
+      expect(returned_json['restaurants']["zip"]).to eq first_restaurant.zip
       expect(returned_json['pictures'].length).to eq 2
     end
   end
