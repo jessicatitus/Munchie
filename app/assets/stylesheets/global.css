@@ -33,6 +33,16 @@ a:hover {
 img.index-image {
   border-radius: 10px;
   padding: 4px;
+  width: 280px;
+  height: 280px;
+}
+
+img.show-image {
+  /*width: 280px;
+  height: 180px;*/
+  display: block;
+  margin: auto;
+  border-radius: 10px;
 }
 
 span.login a, span.links a {

@@ -18,7 +18,7 @@ feature "Authenticated users can delete their account" do
 
     click_button "Log in"
 
-    click_on "Edit Profile"
+    click_on "Jess"
 
     expect(page).to have_content "Edit User"
 
