@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
@@ -9,11 +10,9 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
       city: "Somerville",
       state: "MA",
       zip: "02143",
-      description: "Cult donut-maker offers unique sweet and savory flavors,"\
-      " pastries, and java in modern wood-clad digs",
       img_url: "http://static1.squarespace.com/static/51dacd5be4b0a4195e57886a"\
       "/t/54622df0e4b0719cb5b6638a/1415720432271/USDlogo.png?format=1000w"
-    )
+ )
   end
 
   let!(:second_restaurant) do
@@ -23,8 +22,6 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
       city: "Woburn",
       state: "MA",
       zip: "01801",
-      description: "Snug colorful bakeshop lures locals with its range of"\
-      " homemade, gluten-free, and vegan desserts",
       img_url: "http://3.bp.blogspot.com/-sV8nvQ4Gdp4/TjrLSxQDz3I/AAAAAAAAAA4"\
       "/CGBF679SyTU/s860/new%2Bblog%2Bpic.jpg"
     )
@@ -62,29 +59,23 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
 
-      expect(returned_json['restaurant'].length).to eq 2
-      expect(returned_json['restaurant'][0]["name"]).to eq "Union Square Donuts"
-      expect(returned_json['restaurant'][0]["address"]).to eq "20 Bow Street"
-      expect(returned_json['restaurant'][0]["city"]).to eq "Somerville"
-      expect(returned_json['restaurant'][0]["state"]).to eq "MA"
-      expect(returned_json['restaurant'][0]["zip"]).to eq "02143"
-      expect(returned_json['restaurant'][0]["description"]).to eq "Cult"\
-      " donut-maker offers unique sweet and savory flavors, pastries,"\
-      " and java in modern wood-clad digs"
-      expect(returned_json['restaurant'][0]["img_url"]).to eq "http://static1."\
+      expect(returned_json['restaurants'].length).to eq 2
+      expect(returned_json['restaurants'][0]["name"]).to eq "Union Square Donuts"
+      expect(returned_json['restaurants'][0]["address"]).to eq "20 Bow Street"
+      expect(returned_json['restaurants'][0]["city"]).to eq "Somerville"
+      expect(returned_json['restaurants'][0]["state"]).to eq "MA"
+      expect(returned_json['restaurants'][0]["zip"]).to eq "02143"
+      expect(returned_json['restaurants'][0]["img_url"]).to eq "http://static1."\
       "squarespace.com/static/51dacd5be4b0a4195e57886a/t/54622df0e4b0719cb5b"\
       "6638a/1415720432271/USDlogo.png?format=1000w"
 
-      expect(returned_json['restaurant'][1]["name"]).to eq "Something Sweet"\
+      expect(returned_json['restaurants'][1]["name"]).to eq "Something Sweet"\
       " Without Wheat"
-      expect(returned_json['restaurant'][1]["address"]).to eq "19 6th Road"
-      expect(returned_json['restaurant'][1]["city"]).to eq "Woburn"
-      expect(returned_json['restaurant'][1]["state"]).to eq "MA"
-      expect(returned_json['restaurant'][1]["zip"]).to eq "01801"
-      expect(returned_json['restaurant'][1]["description"]).to eq "Snug"\
-      " colorful bakeshop lures locals with its range of homemade, "\
-      "gluten-free, and vegan desserts"
-      expect(returned_json['restaurant'][1]["img_url"]).to eq "http://3."\
+      expect(returned_json['restaurants'][1]["address"]).to eq "19 6th Road"
+      expect(returned_json['restaurants'][1]["city"]).to eq "Woburn"
+      expect(returned_json['restaurants'][1]["state"]).to eq "MA"
+      expect(returned_json['restaurants'][1]["zip"]).to eq "01801"
+      expect(returned_json['restaurants'][1]["img_url"]).to eq "http://3."\
       "bp.blogspot.com/-sV8nvQ4Gdp4/TjrLSxQDz3I/AAAAAAAAAA4/CGBF679SyTU"\
       "/s860/new%2Bblog%2Bpic.jpg"
 
@@ -93,7 +84,8 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
   describe "GET#show" do
     it "should return a restaurant and all its pictures" do
-      get :show, params: { id: first_restaurant.id }
+      get :show, params: { id: first_restaurant.id,   headers: { "HTTP_API_TOKEN": "token"} }
+
 
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200

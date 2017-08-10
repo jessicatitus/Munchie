@@ -22,9 +22,9 @@ feature "Authenticated user can update their profile information" do
 
     click_button "Log in"
 
-    click_on "Edit Profile"
+    click_on "Jess"
 
-    expect(page).to have_content "Edit Profile"
+    expect(page).to have_content "Edit User"
     expect(page).to have_content "First Name"
     expect(page).to have_content "Last Name"
     expect(page).to have_content "Password"
