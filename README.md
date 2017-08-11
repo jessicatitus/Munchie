@@ -18,8 +18,8 @@ Munchie is a super visual app for users who have trouble deciding where they wan
 <h5>To run this app on your local machine</h5>
 <ul>
 <li>Install Ruby.2.3.3</li>
-<li>In a terminal, run `git clone https://github.com/laurado/donut-worry.git`</li>
-<li>Navigate to the project's root directory with `cd donut-worry`</li>
+<li>In a terminal, run `git clone https://github.com/jessicatitus/Munchie.git`</li>
+<li>Navigate to the project's root directory with `cd munchie`</li>
 <li>Run `bundle install && npm install && rake db:setup`</li>
 <li>In terminal, run `rails s`</li>
 <li>In another terminal window, run  `npm start`</li>
