@@ -38,11 +38,17 @@ img.index-image {
 }
 
 img.show-image {
-  /*width: 280px;
-  height: 180px;*/
   display: block;
   margin: auto;
   border-radius: 10px;
+  /*padding-bottom: 15px;*/
+}
+img.show-image-pics {
+  width: 230px;
+  height: 230px;
+  display: block;
+  border-radius: 10px;
+  margin: auto;
 }
 
 span.login a, span.links a {

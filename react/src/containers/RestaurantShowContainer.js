@@ -60,6 +60,9 @@ class RestaurantShowContainer extends Component {
       </div>
           <div className="row">
             {showImage}
+          </div><br />
+
+            <div className="row">
             {pictures}
           </div>
         </div>

@@ -2,7 +2,9 @@ import React from 'react';
 
 const PictureTile = (props) => {
   return(
-      <img className='show-image' src={props.src} alt={props.alt}></img>
+    <div className="small-4 columns">
+      <img className='show-image-pics' src={props.src} alt={props.alt}></img>
+    </div>
 )
 }
 
