@@ -73,11 +73,11 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
       expect(returned_json['restaurants'].length).to eq 2
       expect(returned_json['restaurants'][0]["name"]).to eq "Union Square Donuts"
-      expect(returned_json['restaurants'][0]["img_url"]).to eq "/uploads/restaurant/img_url/9/chio-day-quotes.jpg"
+      expect(returned_json['restaurants'][0]["img_url"]["url"]).to eq "/uploads/restaurant/img_url/#{first_picture.id}/chio-day-quotes.jpg"
 
       expect(returned_json['restaurants'][1]["name"]).to eq "Something Sweet"\
       " Without Wheat"
-      expect(returned_json['restaurants'][1]["img_url"]).to eq {"url"=>"/uploads/restaurant/img_url/13/chio-day-quotes.jpg", "thumb"=>{"url"=>"/uploads/restaurant/img_url/13/thumb_chio-day-quotes.jpg"}}
+      expect(returned_json['restaurants'][1]["img_url"]["url"]).to eq "/uploads/restaurant/img_url/#{second_picture.id}/chio-day-quotes.jpg"
     end
   end
 
@@ -91,10 +91,10 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
 
       expect(returned_json.length).to eq 2
       expect(returned_json['restaurant']["name"]).to eq first_restaurant.name
-      expect(returned_json['restaurants']["address"]).to eq first_restaurant.address
-      expect(returned_json['restaurants']["city"]).to eq first_restaurant.city
-      expect(returned_json['restaurants']["state"]).to eq first_restaurant.state
-      expect(returned_json['restaurants']["zip"]).to eq first_restaurant.zip
+      expect(returned_json['restaurant']["address"]).to eq first_restaurant.address
+      expect(returned_json['restaurant']["city"]).to eq first_restaurant.city
+      expect(returned_json['restaurant']["state"]).to eq first_restaurant.state
+      expect(returned_json['restaurant']["zip"]).to eq first_restaurant.zip
       expect(returned_json['pictures'].length).to eq 2
     end
   end
